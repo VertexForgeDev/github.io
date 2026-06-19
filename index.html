@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VertexForge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- GLOW -->
+<div class="glow-blue"></div>
+<div class="glow-purple"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="logo">VertexForge</div>
+  <div class="tag">Dev Hub</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Build. Experiment. Deploy.</h1>
+  <p>A collection of web apps, AI tools and creative experiments.</p>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects">
+
+  <a class="card" href="lovefilm/">
+    <h2>🎬 LoveFilm</h2>
+    <p>Movie browsing / UI experiment</p>
+  </a>
+
+  <a class="card" href="#">
+    <h2>🤖 AI Tools</h2>
+    <p>Coming soon</p>
+  </a>
+
+  <a class="card" href="#">
+    <h2>⚙️ Web Utilities</h2>
+    <p>Coming soon</p>
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 VertexForgeDev
+</footer>
+
+<script>
+const blue = document.querySelector(".glow-blue");
+const purple = document.querySelector(".glow-purple");
+
+let mx = 0, my = 0;
+let bx = 0, by = 0;
+let px = 0, py = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mx = e.clientX;
+  my = e.clientY;
+});
+
+function animate() {
+  bx += (mx - bx) * 0.12;
+  by += (my - by) * 0.12;
+
+  px += (mx - px) * 0.06;
+  py += (my - py) * 0.06;
+
+  blue.style.left = bx + "px";
+  blue.style.top = by + "px";
+
+  purple.style.left = px + "px";
+  purple.style.top = py + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
