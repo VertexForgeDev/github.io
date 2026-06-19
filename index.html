@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VertexForge</title>
 
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09K1QXMWJ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-09K1QXMWJ4');
+  </script>
+
   <!-- GLITCH CYBER FAVICON -->
   <link rel="icon" href="data:image/svg+xml,
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
@@ -15,7 +25,6 @@
       </linearGradient>
     </defs>
 
-    <!-- glitch base shadow layers -->
     <text x='50' y='58' text-anchor='middle'
       font-size='34' font-family='Arial Black'
       fill='%23ff00ff' opacity='0.6'
@@ -30,7 +39,6 @@
       VF
     </text>
 
-    <!-- main core -->
     <text x='50' y='58'
       text-anchor='middle'
       font-size='34'
@@ -39,11 +47,9 @@
       VF
     </text>
 
-    <!-- glitch bar -->
     <rect x='20' y='45' width='60' height='2' fill='white' opacity='0.15'>
       <animate attributeName='y' values='40;60;40' dur='1.2s' repeatCount='indefinite'/>
     </rect>
-
   </svg>">
 
   <link rel="stylesheet" href="style.css">
@@ -66,7 +72,6 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
     }
 
     .logo::before {
@@ -118,9 +123,7 @@
       padding: 20px 40px;
     }
 
-    .tag {
-      color: #888;
-    }
+    .tag { color: #888; }
 
     .hero {
       padding: 80px 40px;
