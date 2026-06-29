@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VertexForge</title>
 
-  <!-- GOOGLE ANALYTICS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-09K1QXMWJ4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,7 +13,6 @@
     gtag('config', 'G-09K1QXMWJ4');
   </script>
 
-  <!-- GREEN TERMINAL FAVICON -->
   <link rel="icon" href="data:image/svg+xml,
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
     <defs>
@@ -270,29 +268,35 @@
       padding: 50px;
       color: rgba(0,255,140,0.4);
     }
+
+    /* RESPONSIVE OPTIMIZATIONS */
+    @media (max-width: 900px) {
+      .projects { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .nav { padding: 20px; }
+      .hero h1 { font-size: 32px; }
+      .projects { grid-template-columns: 1fr; padding: 20px; }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- INTRO (UNCHANGED) -->
 <div id="terminal-intro">
   <div id="terminal-content"></div>
 </div>
 
-<!-- NAV -->
 <header class="nav">
   <div class="logo">VertexForge</div>
   <div class="tag">Dev Hub</div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Build. Experiment. Deploy.</h1>
   <p>A collection of web apps, AI tools and creative experiments.</p>
 </section>
 
-<!-- PROJECTS -->
 <section class="projects">
   <a class="card" href="#"><h2>🧠 Portfolio Study</h2><p>Coming soon</p></a>
   <a class="card" href="#"><h2>🤖 AI Tools</h2><p>Coming soon</p></a>
@@ -301,7 +305,6 @@
 
 <footer>© 2026 VertexForgeDev</footer>
 
-<!-- COMMAND LINE (NEW) -->
 <div class="response" id="response"></div>
 
 <div class="command-line">
